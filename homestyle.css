@@ -3,7 +3,7 @@
 }
 body {
   font-family: "Merriweather", serif;
-  background-color: rgba(220, 220, 220, 0.555);
+  background-color: rgba(233, 231, 231, 0.336);
 }
 
 #mine_continer {
@@ -74,6 +74,7 @@ header {
 }
 .iconsbox button {
   border: none;
+  background-color: rgba(233, 231, 231, 0.336);
 }
 .box {
   display: inline-flex;
@@ -110,4 +111,154 @@ textarea {
   height: auto;
   width: 100px;
   overflow: scroll;
+}
+#cardpro1 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  height: 300px;
+  width: 450px;
+}
+
+#protitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+#protitle p {
+  margin: 0;
+  color: #4b5563;
+}
+
+#procontent {
+  display: flex;
+  gap: 20px;
+}
+
+#probox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+#probox img {
+  width: 150px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#probox button {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f1f1f1;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#clinicbox {
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.card img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.card p {
+  margin: 0;
+  flex: 1;
+  font-size: 12px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.card span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+}
+.gridpart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 20px;
+}
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+  #mine_continer {
+    grid-template-columns: 80px 1fr;
+  }
+  .contentOne {
+    width: 100px;
+    padding: 15px;
+  }
+  .box {
+    margin: 10px;
+  }
+  .firstimg p {
+    display: none;
+  }
+  .box p {
+    display: none;
+  }
+  .search-box {
+    width: 150px;
+  }
+  #cardpro1 {
+    width: 100%;
+    height: auto;
+  }
+  #procontent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gridpart {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- PHONE ---------- */
+@media (max-width: 600px) {
+  #mine_continer {
+    grid-template-columns: 1fr;
+  }
+  .contentOne {
+    display: none;
+  }
+  .box {
+    width: 100%;
+  }
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .search-box {
+    width: 100%;
+    order: 3;
+  }
+  #cardpro1 {
+    padding: 15px;
+  }
+  #probox img {
+    width: 100px;
+    height: 90px;
+  }
+  .card p {
+    font-size: 11px;
+  }
 }

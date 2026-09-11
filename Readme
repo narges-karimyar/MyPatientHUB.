@@ -1,0 +1,24 @@
+# MyPatientHUB
+
+A responsive healthcare dashboard where users can find doctors, clinics, pharmacies, and manage appointments.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Font Awesome
+- Google Fonts
+
+## Features
+
+- Dashboard with promotion cards (Clinics, Pharmacies, Smart Market, Health Index)
+- Sidebar navigation (Dashboard, Appointments, Find Doctor, Find Clinic, Chat, Find MarketPlace, Find Pharmacy, My Dependents, My Account, Settings)
+- Search bar, notifications, settings, and account icons in header
+- Log out button with alert message
+- Responsive design for desktop, tablet, and mobile
+
+# A team work
+
+1.karimyarnarges@gmail.com
+2.Safaht456@gmail.com

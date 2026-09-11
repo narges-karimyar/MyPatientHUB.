@@ -1,0 +1,285 @@
+/* تنظیمات پایه و ریست */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* پس‌زمینه بالایی با گرادیان شبیه به تصویر */
+.top-bg {
+  width: 100%;
+  height: 380px;
+  /* ترکیب گرادیان‌ها برای شبیه‌سازی پس‌زمینه موج‌دار */
+  background:
+    radial-gradient(
+      circle at 15% 50%,
+      rgba(138, 43, 226, 0.4),
+      transparent 45%
+    ),
+    radial-gradient(circle at 85% 30%, rgba(0, 191, 255, 0.3), transparent 45%),
+    linear-gradient(135deg, #2b1b3d, #1f3a5f, #4b2c6b, #d76d77);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* بخش اصلی و کارت سفید */
+.main-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* کشیدن کارت به سمت بالا برای همپوشانی با پس‌زمینه */
+  margin-top: -180px;
+  z-index: 10;
+}
+
+.login-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.login-card h2 {
+  font-size: 1.25rem;
+  color: #333333;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* دکمه‌های شبکه‌های اجتماعی */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  transform: translateY(-2px);
+}
+
+/* فیلدهای ورودی */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  color: #333;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #aaaaaa;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #9c27b0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.1);
+}
+
+/* دکمه ورود (Sign In) */
+.btn-signin {
+  background: linear-gradient(to right, #e91e63, #9c27b0);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+  margin-top: 5px;
+}
+
+.btn-signin:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* بخش فراموشی رمز و مرا به خاطر بسپار */
+.form-utils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #777777;
+  margin-top: 5px;
+}
+
+.form-utils a {
+  color: #777777;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.form-utils a:hover {
+  color: #333333;
+}
+
+.form-utils label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.form-utils input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #9c27b0;
+}
+
+/* خط جداکننده OR */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 25px 0;
+  color: #aaaaaa;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.divider::before {
+  margin-right: 15px;
+}
+.divider::after {
+  margin-left: 15px;
+}
+
+/* دکمه ثبت نام (Sign Up) */
+.btn-signup {
+  background: linear-gradient(to right, #42a5f5, #1e88e5);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.5px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-signup:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* فوتر پایین صفحه */
+footer {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+footer a {
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #333333;
+}
+
+/* واکنش‌گرایی (Responsive) برای موبایل */
+@media (max-width: 480px) {
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+  .header-text p {
+    font-size: 0.9rem;
+  }
+  .main-content {
+    margin-top: -120px;
+    padding: 0 15px;
+  }
+  .login-card {
+    padding: 30px 20px;
+  }
+  footer {
+    gap: 15px;
+    padding: 0 10px;
+  }
+}
