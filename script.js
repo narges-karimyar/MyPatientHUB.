@@ -3,7 +3,9 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 
   const user = document.getElementById("username").value.trim();
   const pass = document.getElementById("password").value;
-
+  if (user == !"@") {
+    alert("your emil should @");
+  }
   if (user === "") {
     alert("Please enter your email or phone number.");
     return;
